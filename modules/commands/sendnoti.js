@@ -1,5 +1,5 @@
 module.exports.config = {
-    name: "sendnoti",
+    name: "اشعار",
     version: "1.0.0",
     hasPermssion: 2,
     credits: "Yan Maglinte",
@@ -17,7 +17,7 @@ module.exports.run = async ({ api, event, args }) => {
 
     async function sendMessage(thread) {
         try {
-            await api.sendMessage(`› A message from the Admin:\n\n${custom}`, thread.threadID);
+            await api.sendMessage(`› رسالة من الادمن:\n\n${custom}`, thread.threadID);
             sentCount++;
         } catch (error) {
             console.error("Error sending a message:", error);
