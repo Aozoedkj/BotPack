@@ -1,5 +1,5 @@
 module.exports.config = {
-  name: "video",
+  name: "فيديو",
   version: "1.0.0",
   hasPermssion: 0,
   credits: "CatalizCS mod video by Đăng",
@@ -103,7 +103,7 @@ module.exports.run = async function({ api, event, args }) {
         msg += (`${num += 1}. ${value.title}\nTime: ${time}\nChannel: ${channel}\n❍━━━━━━━━━━━━❍\n`);
       }
 
-      var body = `There are ${link.length} results matching your search keyword:\n\n${msg}\nPlease reply(feedback) choose one of the above searches`
+      var body = `There are ${link.length} هذا ما وجدت:\n\n${msg}\nاختر رقم الفيديو`
 
       return api.sendMessage({ attachment: imgthumnail, body: body }, event.threadID, (error, info) => global.client.handleReply.push({
         name: this.config.name,
