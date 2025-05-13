@@ -1,5 +1,5 @@
 module.exports.config = {
-	name: "unsend",
+	name: "احذف",
 	version: "1.0.1",
 	hasPermssion: 0,
 	credits: "Mirai Team",
@@ -22,7 +22,7 @@ module.exports.run = function({ api, event, getText }) {
 
 module.exports.languages = {
 	"en": {
-		"returnCant": "Can't remove other people's messages.",
-		"missingReply": "You can't unsend a message out of nowhere. Please reply to a message first."
+		"returnCant": "لا يمكن حذف رساىل الاخرين❎.",
+		"missingReply": "اجروك رد على الرسالة التي تريد حذفها."
 	}
 }
