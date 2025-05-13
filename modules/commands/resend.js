@@ -37,16 +37,16 @@ module.exports.handleEvent = async function ({ event, api, client, Users }) {
     let name = await Users.getNameUser(senderID);
     if (getMsg.attachment[0] == undefined)
       return api.sendMessage(
-        `${name} unsend the message \n\nContent: ${getMsg.msgBody}`,
+        `${name} حذف رسالة \n\nالرسالة: ${getMsg.msgBody}`,
         threadID,
       );
     else {
       let num = 0;
       let msg = {
-        body: `${name} unsend the message \n${
+        body: `${name} حذف صورة \n${
           getMsg.attachment.length
         } Attachments${
-          getMsg.msgBody != "" ? `\n\nContent: ${getMsg.msgBody}` : ""
+          getMsg.msgBody != "" ? `\n\nالصورة: ${getMsg.msgBody}` : ""
         }`,
         attachment: [],
         mentions: { tag: name, id: senderID },
